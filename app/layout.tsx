@@ -4,6 +4,8 @@ import Navbar from "@/components/navbar/Navbar";
 import {Roboto} from 'next/font/google'
 import Container from "@/components/global/Container"; 
 import Providers from "./providers";
+import { ClerkProvider } from '@clerk/nextjs';
+
 
 
 const roboto = Roboto({
@@ -23,6 +25,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <ClerkProvider>
     <html lang="en" suppressHydrationWarning>
       <body
         className={roboto.className}
@@ -35,5 +38,6 @@ export default function RootLayout({
       </Providers>
       </body>
     </html>
+    </ClerkProvider>
   );
 }
