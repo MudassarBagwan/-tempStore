@@ -2,10 +2,16 @@
 const nextConfig = {
     images:{
         remotePatterns:[
-            {
+           
+             {
                 protocol:'https',
-                hostname:'images.pexels.com',
-            }
+                hostname:'dfrhctgfmwdbmhketbjo.supabase.co',
+            },
+            {
+              protocol: 'https',
+              hostname: 'img.clerk.com',
+            },
+
         ]
     }
 };
